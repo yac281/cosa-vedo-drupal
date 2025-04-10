@@ -1,0 +1,23 @@
+uuid: 5b35b0fc-2c54-4dd0-aebf-ed05acd5351a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer
+    - field.storage.block_content.field_menu
+id: block_content.footer.field_menu
+field_name: field_menu
+entity_type: block_content
+bundle: footer
+label: Menu
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:menu'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

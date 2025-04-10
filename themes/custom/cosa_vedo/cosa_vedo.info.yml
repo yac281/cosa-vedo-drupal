@@ -1,0 +1,15 @@
+name: Cosa Vedo
+type: theme
+base theme: stark
+description: A flexible theme with a responsive, mobile-first layout.
+package: Custom
+core_version_requirement: ^11
+libraries:
+  - cosa-vedo/global-scripts
+  - cosa-vedo/global-styling
+regions:
+  header: Header
+  content: Content
+  block_hidden: Block Hidden Region
+  facet_hidden: Facet Hidden Region
+  footer: Footer

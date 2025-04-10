@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		font-size: 16px;
+		font-family: var(--font-family-sans);
+		color: var(--text-body);
+		accent-color: var(--status-primary-text);
+		min-height: 100svh;
+	}
+
+	h1 {
+		@apply text-4xl font-semibold text-title;
+	}
+
+	h2 {
+		@apply text-3xl font-semibold text-title;
+	}
+
+	h4 {
+		@apply text-sm font-semibold text-title;
+	}
+
+	a {
+		color: var(--brand-600);
+		@apply font-semibold;
+	}
+}
+
+@layer components {
+	.btn-primary-filled {
+		@apply max-w-full cursor-pointer rounded-lg border-2 border-transparent bg-status-primary-default px-5 py-2 text-center font-semibold text-white hover:bg-status-primary-hover active:bg-status-primary-active;
+	}
+
+	.btn-primary-ghost {
+		@apply max-w-full cursor-pointer rounded-lg border-2 border-status-primary-default px-5 py-2 text-center font-semibold text-status-primary-default hover:border-status-primary-hover active:border-status-primary-active;
+	}
+
+	.btn-white-ghost {
+		@apply max-w-full cursor-pointer rounded-lg border-2 border-white px-5 py-2 text-center font-semibold text-white hover:border-white active:border-white;
+	}
+
+	.badge-default {
+		@apply h-fit rounded-full border border-input bg-white px-4 py-2 text-sm font-semibold text-title;
+	}
+
+	.badge-muted {
+		@apply h-fit rounded-full border border-status-neutral-border bg-status-neutral-surface px-4 py-2 text-sm font-semibold;
+	}
+
+	.badge-primary {
+		@apply h-fit rounded-full border border-primary bg-status-primary-surface px-4 py-2 text-sm font-semibold text-status-primary-default;
+	}
+
+	.badge-error {
+		@apply h-fit rounded-full border border-error bg-status-error-surface px-4 py-2 text-sm font-semibold text-status-error-default;
+	}
+
+	.badge-success {
+		@apply h-fit rounded-full border border-success bg-status-success-surface px-4 py-2 text-sm font-semibold text-status-success-default;
+	}
+
+	.badge-warning {
+		@apply h-fit rounded-full border border-warning bg-status-warning-surface px-4 py-2 text-sm font-semibold text-status-warning-default;
+	}
+
+	.badge-status-default {
+		@apply h-3 w-3 rounded-full bg-status-neutral-border;
+	}
+	.badge-status-primary {
+		@apply h-3 w-3 rounded-full bg-status-primary-border;
+	}
+	.badge-status-error {
+		@apply h-3 w-3 rounded-full bg-status-error-border;
+	}
+	.badge-status-success {
+		@apply h-3 w-3 rounded-full bg-status-success-border;
+	}
+	.badge-status-warning {
+		@apply h-3 w-3 rounded-full bg-status-warning-border;
+	}
+
+	.badge-small {
+		@apply px-2 py-1 text-xs;
+	}
+
+	.infobox-primary {
+		@apply h-fit rounded-lg border border-primary bg-status-primary-surface px-4 py-2 text-sm text-status-primary-default;
+	}
+
+	.infobox-error {
+		@apply h-fit rounded-lg border border-error bg-status-error-surface px-4 py-2 text-sm text-status-error-default;
+	}
+
+	.infobox-success {
+		@apply h-fit rounded-lg border border-success bg-status-success-surface px-4 py-2 text-sm text-status-success-default;
+	}
+
+	.infobox-warning {
+		@apply h-fit rounded-lg border border-warning bg-status-warning-surface px-4 py-2 text-sm text-status-warning-default;
+	}
+
+	.form-item {
+		label {
+			@apply text-sm font-semibold leading-7 text-title opacity-80;
+		}
+	}
+	.form-text {
+		@apply h-12 w-full max-w-full rounded-lg border border-input px-4 py-3 focus:border-status-primary-default focus:ring-status-primary-default;
+	}
+	.form-email {
+		@apply h-12 w-full max-w-full rounded-lg border border-input px-4 py-3;
+	}
+	.form-date {
+		@apply h-12 max-w-full rounded-lg border-input px-4 py-3;
+	}
+	.form-time {
+		@apply h-12 max-w-full rounded-lg border-input px-4 py-3;
+	}
+	.form-tel {
+		@apply h-12 max-w-full rounded-lg border-input px-4 py-3;
+	}
+	.form-textarea {
+		@apply h-24 w-full max-w-full rounded-lg border-input px-4 py-3;
+	}
+	.form-select {
+		@apply h-12 w-full max-w-full rounded-lg border border-input pl-3;
+	}
+	.form-number {
+		@apply h-12 max-w-full rounded-lg border border-input pl-3;
+	}
+	.form-checkbox {
+		@apply h-6 w-6 rounded-md;
+	}
+	.form-radio {
+		@apply h-6 w-6 rounded-full;
+	}
+	.form-submit {
+		@apply btn-primary-filled;
+	}
+	.form-file {
+		@apply btn-primary-filled;
+	}
+	.section-wrap {
+		@apply mx-auto w-full;
+
+		--max-width: 1280px;
+		--padding-x: 16px;
+
+		padding-left: var(--padding-x);
+		padding-right: var(--padding-x);
+		max-width: var(--max-width);
+
+		&.scroll-x {
+			overflow-x: auto;
+			overflow-y: hidden;
+			max-width: initial;
+			padding-left: initial;
+			padding-right: initial;
+
+			--margin: calc(100% - var(--max-width) - 2 * var(--padding-x));
+			--margin-half: calc(var(--margin) / 2);
+			--padding: max(var(--padding-x), calc(var(--margin-half) + 2 * var(--padding-x)));
+
+			.section-scroll-wrapper {
+				display: inline-flex;
+				padding: 0 var(--padding);
+			}
+
+			&.gravity-reverse {
+				direction: rtl;
+
+				.section-scroll-wrapper {
+					direction: ltr;
+				}
+			}
+		}
+
+		@media (min-width: 768px) {
+			--padding-x: 40px;
+		}
+	}
+	.card {
+		@apply rounded-2xl border border-input bg-white;
+	}
+}

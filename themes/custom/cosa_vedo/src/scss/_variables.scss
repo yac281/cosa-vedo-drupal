@@ -1,0 +1,123 @@
+:root {
+	--font-family-sans: "Poppins";
+
+	--brand-50: #e4effc;
+	--brand-100: #c7ddf8;
+	--brand-200: #a9caf4;
+	--brand-300: #8cb8f0;
+	--brand-400: #6fa5ec;
+	--brand-500: #5292e8;
+	--brand-600: #3f82d5;
+	--brand-700: #2b63b7;
+	--brand-800: #2c57a1;
+	--brand-900: #284b80;
+	--brand-950: #1d2f4e;
+	--blue-950: #171d6d;
+	--neutral-50: #f7f8f9;
+	--neutral-100: #f1f2f4;
+	--neutral-200: #d0d4da;
+	--neutral-300: #b3b9c4;
+	--neutral-400: #7e84a3;
+	--neutral-500: #758195;
+	--neutral-600: #626f86;
+	--neutral-700: #44546f;
+	--neutral-900: #172b4d;
+
+	--base-20: color-mix(in srgb, #ffffff, transparent 20%);
+	--base-50: color-mix(in srgb, #ffffff, transparent 50%);
+	--base-80: color-mix(in srgb, #ffffff, transparent 80%);
+	--base-100: #ffffff;
+	--black-100: #000000;
+
+	--success-50: color-mix(in srgb, #146c43, transparent 50%);
+	--success-100: #d1e7dd;
+	--success-200: #a3cfbb;
+	--success-300: #73e377;
+	--success-400: #479f76;
+	--success-500: #1da33c;
+	--success-600: #146c43;
+	--success-700: #0f5132;
+	--success-800: #0a3622;
+
+	--warning-50: color-mix(in srgb, #fd7e14, transparent 50%);
+	--warning-100: #ffe5d0;
+	--warning-200: #fecba1;
+	--warning-300: #ffd066;
+	--warning-400: #ffbc3f;
+	--warning-500: #fd7e14;
+	--warning-600: #ca6510;
+	--warning-700: #984c0c;
+
+	--danger-50: color-mix(in srgb, #dc3545, transparent 50%);
+	--danger-100: #f8d7da;
+	--danger-200: #f1aeb5;
+	--danger-300: #ff9b83;
+	--danger-400: #ff7565;
+	--danger-500: #dc3545;
+	--danger-600: #b02a37;
+	--danger-700: #842029;
+
+	--background: var(--neutral-50);
+	--text-title: var(--brand-950);
+	--text-title-variant: var(--base-100);
+	--text-body: var(--neutral-700);
+	--icon: var(--neutral-900);
+	--icon-variant: var(--base-100);
+
+	--outline-input: var(--neutral-200);
+	--outline-component: var(--neutral-300);
+	--outline-component-variant: var(--base-20);
+	--outline-title: var(--brand-950);
+
+	--status-primary-default: var(--brand-600);
+	--status-primary-hover: var(--brand-700);
+	--status-primary-active: var(--brand-800);
+	--status-primary-surface: var(--brand-50);
+	--status-primary-disabled: color-mix(in srgb, var(--brand-600), transparent 50%);
+	--status-primary-border: var(--brand-200);
+	--status-primary-inverted: var(--base-100);
+	--status-primary-text: var(--brand-700);
+
+	--status-neutral-default: var(--neutral-500);
+	--status-neutral-hover: var(--neutral-600);
+	--status-neutral-active: var(--neutral-700);
+	--status-neutral-surface: var(--neutral-100);
+	--status-neutral-disabled: var(--neutral-400);
+	--status-neutral-border: var(--neutral-200);
+	--status-neutral-inverted: var(--base-100);
+	--status-neutral-text: var(--neutral-700);
+
+	--status-negative-default: var(--base-100);
+	--status-negative-hover: var(--base-100);
+	--status-negative-active: var(--base-100);
+	--status-negative-disabled: var(--base-20);
+	--status-negative-inverted: var(--brand-600);
+
+	--status-success-default: var(--success-600);
+	--status-success-hover: var(--success-700);
+	--status-success-active: var(--success-800);
+	--status-success-surface: var(--success-100);
+	--status-success-disabled: var(--success-50);
+	--status-success-border: var(--success-200);
+	--status-success-inverted: var(--base-100);
+	--status-success-text: var(--success-700);
+
+	--status-warning-default: var(--warning-600);
+	--status-warning-hover: var(--warning-700);
+	--status-warning-active: var(--warning-800);
+	--status-warning-surface: var(--warning-100);
+	--status-warning-disabled: var(--warning-50);
+	--status-warning-border: var(--warning-200);
+	--status-warning-inverted: var(--base-100);
+	--status-warning-text: var(--warning-700);
+
+	--status-error-default: var(--danger-600);
+	--status-error-hover: var(--danger-700);
+	--status-error-active: var(--danger-800);
+	--status-error-surface: var(--danger-100);
+	--status-error-disabled: var(--danger-50);
+	--status-error-border: var(--danger-200);
+	--status-error-inverted: var(--base-100);
+	--status-error-text: var(--danger-700);
+  --status-error-bright: var(--danger-500);
+}

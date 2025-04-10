@@ -1,0 +1,8 @@
+.custom-progress-tracker {
+	.progress-step {
+		&.is-complete,
+		&.is-active {
+			background-color: var(--status-primary-default);
+		}
+	}
+}

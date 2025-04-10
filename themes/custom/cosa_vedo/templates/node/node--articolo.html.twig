@@ -1,0 +1,239 @@
+<section class="section single-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+        <div class="page-wrapper">
+          <div class="blog-title-area text-center">
+
+            <span class="color-orange"><a href="/articoli" title="">Recensione</a></span>
+
+            <h3>{{ node.title.value }}</h3>
+
+            <div class="blog-meta big-meta">
+              <small><a href="tech-single.html" title="">{{ node.field_data_di_uscita.value|date("d-m-Y") }}</a></small>
+              <small><a href="tech-author.html" title="">scritto da {{ node.uid.entity.name.value }}</a></small>
+            </div><!-- end meta -->
+
+
+          </div><!-- end title -->
+
+          <div class="single-post-media">
+            {% set media_entity = node.field_immagine_copertina.entity %}
+            {% set file_entity = media_entity.field_media_image.entity %}
+            {% set file_url = file_entity.fileuri|file_url %}
+            <img src="{{ file_url }}" alt="" class="img-fluid">
+          </div><!-- end media -->
+
+          <div class="blog-content">
+            {{ node.field_body.value|raw }}
+          </div><!-- end content -->
+
+          <div class="card mt-4">
+            <div class="card-header text-center" style="background-color: #EFF1F3">
+              <div class="text-center mb-2">
+                {% set media_entity = node.field_immagine_riassunto.entity %}
+                {% set file_entity = media_entity.field_media_image.entity %}
+                {% set file_url = file_entity.fileuri|file_url %}
+                <img style="max-width: 80px; max-height:160px;" src="{{file_url}}" alt="" class="img-fluid">
+              </div>
+              <h5>In parole brevi</h5>
+              <span class="rating">
+                {% set rating = node.field_voto.value|round(0, 'floor') %}
+                {% for i in 1..5 %}
+                  {% if i <= rating %}
+                    <i class="fa fa-ticket" aria-hidden="true" style="color: #FED766; font-size: x-large;"></i>
+                  {% else %}
+                    <i class="fa fa-ticket" aria-hidden="true" style="color: #ddd; font-size: x-large;"></i>
+                  {% endif %}
+                {% endfor %}
+              </span>
+            </div>
+            <div class="card-body text-center" style="padding: 20px">
+              <p>{{ node.field_riassunto.value }}</p>
+            </div>
+          </div>
+
+          <div class="blog-title-area">
+            <!--<div class="tag-cloud-single">
+              <span>Emozioni</span>
+              @foreach ($article->emotions as $emotion)
+              <small><a href="#" title="nome emozione">nome emozione</a></small>
+              @endforeach
+            </div>
+
+            <div class="post-sharing">
+                <ul class="list-inline">
+                    <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="down-mobile">Share on Facebook</span></a></li>
+                    <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="down-mobile">Tweet on Twitter</span></a></li>
+                    <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+            </div> end post-sharing -->
+
+          </div><!-- end title -->
+
+          <div class="row">
+            <div class="col-lg-12">
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2334169882538249"
+                      crossorigin="anonymous"></script>
+              <ins class="adsbygoogle"
+                   style="display:block; text-align:center;"
+                   data-ad-layout="in-article"
+                   data-ad-format="fluid"
+                   data-ad-client="ca-pub-2334169882538249"
+                   data-ad-slot="5667659689"></ins>
+              <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+            </div><!-- end col -->
+          </div><!-- end row -->
+
+          <hr class="invis1">
+
+<!-- Author card -->
+
+          <hr class="invis1">
+
+          <div class="custombox clearfix">
+            <h4 class="small-title">{{ node.field_comment|length }} Commenti</h4>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="comments-list">
+                  {% if node.field_comment > 0 %}
+                    {% for comment in node.field_comment %}
+                      {{ dump(comment) }}
+                      <div class="media">
+                        <a class="media-left" href="#">
+                          <img src="upload/author.jpg" alt="" class="rounded-circle">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading user_name">
+                            <img src="" style="width:50px;height:50px;border-radius:50%;"/>
+                            {{ comment.author_name }} <small>{{ comment.created|date("d/m/Y") }}</small>
+                          </h4>
+                          <p>{{ comment.body.value }}</p>
+                        </div>
+                      </div>
+                    {% endfor %}
+                  {% else %}
+                    <h4 class="small-title">Non vergognarti, scrivi il primo commento!</h4>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="invis1">
+
+          <div class="comment-form">
+            {{ content.field_comment }}
+          </div>
+
+          <!-- <div class="custombox clearfix">
+            <h4 class="small-title">Le opinioni sono libere, lasciane una tua</h4>
+            <div class="row">
+              <div class="col-lg-12">
+                @guest
+                <a href="rvtyvbu" class="btn btn-primary">Accedi per commentare</a>
+                @else
+                <form action="rtfbiuy" method="POST" class="form-wrapper">
+                  @csrf
+                  <input type="hidden" name="article_id" value="rdvtfybgu">
+                  <textarea name="content" id="content" class="form-control" rows="4" required></textarea>
+                  <button type="submit" class="btn btn-primary">Lascia il commento</button>
+                </form>
+                @endguest
+              </div>
+            </div>
+          </div>-->
+        </div><!-- end page-wrapper -->
+      </div><!-- end col -->
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="sidebar">
+          <div class="widget">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2334169882538249"
+                    crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-2334169882538249"
+                 data-ad-slot="1077706231"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div><!-- end widget -->
+
+          <div class="widget">
+            <h2 class="widget-title">Articoli recenti</h2>
+            <div class="blog-list-widget">
+              <div class="list-group">
+                {% set relate_articles = drupal_view_result('vista_articoli_recenti','default',node.id()) %}
+                {% for item in relate_articles %}
+                  {% set entity_item = item._entity %}
+                  <a href="{{  path('entity.node.canonical', {'node': entity_item.id()}) }}" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="w-100 justify-content-between">
+                      {% set media_entity = entity_item.field_immagine_copertina.entity %}
+                      {% set file_entity = media_entity.field_media_image.entity %}
+                      {% set file_url = file_entity.fileuri|file_url %}
+                      <img style="object-fit:cover; height: 60px;" src="{{ file_url }}" alt="" class="img-fluid float-left">
+                      <h5 class="mb-1">{{ entity_item.title.value }}</h5>
+                    </div>
+                  </a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <!--<div class="widget">
+              <h2 class="widget-title">Follow Us</h2>
+
+              <div class="row text-center">
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                      <a href="#" class="social-button facebook-button">
+                          <i class="fa fa-facebook"></i>
+                          <p>27k</p>
+                      </a>
+                  </div>
+
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                      <a href="#" class="social-button twitter-button">
+                          <i class="fa fa-twitter"></i>
+                          <p>98k</p>
+                      </a>
+                  </div>
+
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                      <a href="#" class="social-button google-button">
+                          <i class="fa fa-google-plus"></i>
+                          <p>17k</p>
+                      </a>
+                  </div>
+
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                      <a href="#" class="social-button youtube-button">
+                          <i class="fa fa-youtube"></i>
+                          <p>22k</p>
+                      </a>
+                  </div>
+              </div>
+          </div> end widget -->
+
+          <div class="widget">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2334169882538249"
+                    crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-2334169882538249"
+                 data-ad-slot="5589436938"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div><!-- end widget -->
+        </div><!-- end sidebar -->
+      </div><!-- end col -->
+    </div><!-- end row -->
+  </div><!-- end container -->
+</section>

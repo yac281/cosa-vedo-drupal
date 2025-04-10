@@ -1,0 +1,6 @@
+.form-item > label {
+	&.form-required::after {
+		content: "*";
+		color: var(--status-error-text);
+	}
+}

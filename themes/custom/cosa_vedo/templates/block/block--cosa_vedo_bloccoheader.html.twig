@@ -1,0 +1,68 @@
+{% set block = content['#block_content'] %}
+<header class="tech-header header" style="padding-bottom: 2%">
+  <div class="container-fluid">
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      {% set media_entity = block.field_logo.entity %}
+      {% set file_entity = media_entity.field_media_image.entity %}
+      {% set file_url = file_entity.fileuri|file_url %}
+      <a class="navbar-brand" href="/home"><img style="width: 25%" src="{{ file_url }}" alt=""></a>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          {% set menu_name = block.field_menu.entity.id() %}
+          {% set items = simplify_menu(menu_name) %}
+          {% for menu_item in items.menu_tree %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <ul class="navbar-nav">
+          {% if not logged_in %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ path('user.login') }}">Accedi</a>
+          </li>
+          {% else %}
+
+          {% if user %}
+            {%
+              set edit_profile_url =
+              path(
+                'entity.user.edit_form',
+                {
+                  user: user.id()
+                }
+              )
+            %}
+            {% set user_entity = drupal_entity('user', user.id, 'default') %}
+            {% set user_fields = user_entity['#user'].getFields() %}
+          {% endif %}
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ user_fields['name'].value }}
+            </a>
+            <ul class="dropdown-menu megamenu" aria-labelledby="dropdown01" style="background-color:transparent;border-color:transparent;">
+              <li>
+                <div class="container" style="margin-right:0px">
+                  <div class="mega-menu-content clearfix" style="background-color: transparent;">
+                    <div class="tab" style="float: right; width:20%; background-color:white;border-radius:20px;border:1px solid #009FB7">
+                      <button class="tablinks" onclick="window.location.href='/profile'">Account</button>
+                      <button class="tablinks" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</button>
+                      <form id="logout-form" action="/logout" method="POST" style="display: none;">
+                        @csrf
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+  </div><!-- end container-fluid -->
+</header><!-- end market-header -->

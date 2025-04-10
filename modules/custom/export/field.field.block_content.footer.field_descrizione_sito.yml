@@ -1,0 +1,19 @@
+uuid: 2a3f801f-5b5b-4211-bec5-4542bbdc161c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer
+    - field.storage.block_content.field_descrizione_sito
+id: block_content.footer.field_descrizione_sito
+field_name: field_descrizione_sito
+entity_type: block_content
+bundle: footer
+label: 'Descrizione Sito'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

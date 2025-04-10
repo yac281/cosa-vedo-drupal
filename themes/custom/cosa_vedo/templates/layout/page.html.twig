@@ -1,0 +1,17 @@
+<div class="layout-container mx-0">
+	{{ page.header }}
+
+	<main class="h-full">
+		<div id="content" role="main">
+			<section id="content-page" class="h-full">
+				{{ page.content }}
+			</section>
+
+			{% if page.footer %}
+				<footer role="contentinfo">
+					{{ page.footer }}
+				</footer>
+			{% endif %}
+		</div>
+	</main>
+</div>

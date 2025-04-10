@@ -1,0 +1,25 @@
+uuid: 1d1211b9-29e6-4b50-81f1-f66374eae3ab
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:footer:b8e72f10-3955-4f23-8781-312c1a107795'
+  module:
+    - block_content
+  theme:
+    - cosa_vedo
+id: cosa_vedo_blockfooter
+theme: cosa_vedo
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:b8e72f10-3955-4f23-8781-312c1a107795'
+settings:
+  id: 'block_content:b8e72f10-3955-4f23-8781-312c1a107795'
+  label: 'Block - Footer'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,13 @@
+uuid: 36c0f284-75e9-47ac-a91d-614513ac39e4
+langcode: en
+status: true
+dependencies: {  }
+name: cover
+label: Cover
+effects:
+  ae075a95-418c-4844-a351-fdb72ec35baf:
+    uuid: ae075a95-418c-4844-a351-fdb72ec35baf
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

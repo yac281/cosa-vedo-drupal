@@ -1,0 +1,22 @@
+uuid: 8d852d1d-29f1-4225-9d33-4d1b9db9f9ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cosa_vedo
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: cosa_vedo_content
+theme: cosa_vedo
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

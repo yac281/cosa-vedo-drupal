@@ -1,0 +1,9 @@
+uuid: dcdf874a-e5ca-4efc-85f6-c6c57a64a083
+langcode: en
+status: true
+dependencies: {  }
+name: Emozioni
+vid: emozioni
+description: null
+weight: 0
+new_revision: false

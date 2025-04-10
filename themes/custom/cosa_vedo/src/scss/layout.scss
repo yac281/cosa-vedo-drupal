@@ -1,0 +1,68 @@
+.layout-container {
+	min-height: 100svh;
+	display: flex;
+	flex-direction: column;
+	--header-height: 68px;
+
+	& > .adv-varnish-user-blocks-wrapper >,
+	& > {
+		header {
+			position: sticky;
+			top: 0;
+			left: 0;
+			z-index: 31;
+			width: 100%;
+			overflow: hidden;
+			height: var(--header-height);
+			border-bottom: 1px solid var(--status-neutral-border);
+			background-color: white;
+
+			#drawer-menu {
+				top: var(--header-height);
+				height: calc(100svh - var(--header-height));
+			}
+		}
+		main {
+			display: flex;
+			flex-grow: 1;
+			align-items: stretch;
+
+			& > {
+				aside {
+					min-width: 300px;
+					overflow-x: hidden;
+					overflow-y: auto;
+					border-right: 1px solid var(--status-neutral-border);
+					height: calc(100svh - var(--header-height));
+					position: sticky;
+					top: var(--header-height);
+					left: 0;
+				}
+
+				#content {
+					overflow: hidden;
+					flex-grow: 1;
+					background-color: var(--background);
+				}
+			}
+		}
+	}
+}
+
+.adv-varnish-user-blocks-wrapper {
+  display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 31;
+    width: 100%;
+    overflow: hidden;
+    height: var(--header-height);
+    border-bottom: 1px solid var(--status-neutral-border);
+    background-color: #fff;
+}
+#content-page .adv-varnish-user-blocks-wrapper,
+#content + .adv-varnish-user-blocks-wrapper {
+  display: none;
+}

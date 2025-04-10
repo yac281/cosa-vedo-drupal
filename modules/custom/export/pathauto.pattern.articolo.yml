@@ -1,0 +1,22 @@
+uuid: 0dfc521f-93ff-48a3-ba6e-4cac56805dcf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: articolo
+label: Articolo
+type: 'canonical_entities:node'
+pattern: '/articolo/[node:title]'
+selection_criteria:
+  29c2ab8a-12e6-4537-b64d-1b11dd72a4a5:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 29c2ab8a-12e6-4537-b64d-1b11dd72a4a5
+    context_mapping:
+      node: node
+    bundles:
+      articolo: articolo
+selection_logic: and
+weight: -5
+relationships: {  }

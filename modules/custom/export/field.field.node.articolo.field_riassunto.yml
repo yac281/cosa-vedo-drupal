@@ -1,0 +1,19 @@
+uuid: beba6b4e-49cc-4254-8c64-d937c4c6306b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_riassunto
+    - node.type.articolo
+id: node.articolo.field_riassunto
+field_name: field_riassunto
+entity_type: node
+bundle: articolo
+label: Riassunto
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

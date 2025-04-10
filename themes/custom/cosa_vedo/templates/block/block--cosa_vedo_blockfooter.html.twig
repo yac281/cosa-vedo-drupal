@@ -1,0 +1,55 @@
+{% set block = content['#block_content'] %}
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="widget">
+          <div class="footer-text text-left">
+            {% set media_entity = block.field_logo.entity %}
+            {% set file_entity = media_entity.field_media_image.entity %}
+            {% set file_url = file_entity.fileuri|file_url %}
+            <a class="navbar-brand" href="/home"><img style="width: 25%" src="{{ file_url }}" alt=""></a>
+            <p>{{ block.field_descrizione_sito.value }}</p>
+          </div><!-- end footer-text -->
+        </div><!-- end widget -->
+      </div><!-- end col -->
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget">
+          <h2 class="widget-title">Pagine</h2>
+          {% set menu_name = block.field_menu.entity.id() %}
+          {% set items = simplify_menu(menu_name) %}
+          <div class="link-widget">
+            <ul>
+              {% for menu_item in items.menu_tree %}
+                <li><a href="{{ menu_item.url }}">{{ menu_item.text }}</a></li>
+              {% endfor %}
+            </ul>
+          </div><!-- end link-widget -->
+        </div><!-- end widget -->
+      </div><!-- end col -->
+
+      <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+        <div class="widget">
+          <h2 class="widget-title">Copyrights</h2>
+          <div class="link-widget">
+            <ul>
+              <li><a href="{{ block.field_link_privacy_policy.uri }}">{{ block.field_link_privacy_policy.title }}</a></li>
+              <li><a href="{{ block.field_link_cookies.uri }}">{{ block.field_link_cookies.title }}</a></li>
+            </ul>
+          </div><!-- end link-widget -->
+        </div><!-- end widget -->
+      </div><!-- end col -->
+
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <br>
+        <div class="copyright">&copy; Cosa Vedo.</div>
+      </div>
+    </div>
+  </div><!-- end container -->
+</footer><!-- end footer -->

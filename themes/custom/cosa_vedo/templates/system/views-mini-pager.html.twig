@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a views mini-pager.
+ *
+ * Available variables:
+ * - heading_id: Pagination heading ID.
+ * - pagination_heading_level: The heading level to use for the pager.
+ * - items: List of pager items.
+ *
+ * @see template_preprocess_views_mini_pager()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if items.previous or items.next %}
+<nav role="navigation" aria-labelledby="{{ heading_id }}">
+  <ul>
+    {% if items.previous %}
+      <li>
+        <a href="{{ items.previous.href }}" title="{{ 'Vai alla pagina precedente'|t }}" rel="prev"{{ items.previous.attributes|without('href', 'title', 'rel') }}>
+          <span class="visually-hidden">{{ 'Pagina precedente'|t }}</span>
+          <span aria-hidden="true">{{ items.previous.text|default('‹‹'|t) }}</span>
+        </a>
+      </li>
+    {% endif %}
+    {% if items.current %}
+      <li>
+        {% trans %}
+          Pagina {{ items.current }}
+        {% endtrans %}
+      </li>
+    {% endif %}
+    {% if items.next %}
+      <li>
+        <a href="{{ items.next.href }}" title="{{ 'Vai alla pagina successiva'|t }}" rel="next"{{ items.next.attributes|without('href', 'title', 'rel') }}>
+          <span class="visually-hidden">{{ 'Pagina successiva'|t }}</span>
+          <span aria-hidden="true">{{ items.next.text|default('››'|t) }}</span>
+        </a>
+      </li>
+    {% endif %}
+  </ul>
+  </nav>
+{% endif %}

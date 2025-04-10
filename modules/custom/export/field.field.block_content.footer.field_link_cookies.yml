@@ -1,0 +1,23 @@
+uuid: 946d0f1d-09e0-49ec-9776-fc49c981f575
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer
+    - field.storage.block_content.field_link_cookies
+  module:
+    - link
+id: block_content.footer.field_link_cookies
+field_name: field_link_cookies
+entity_type: block_content
+bundle: footer
+label: 'Link Cookies'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

@@ -1,0 +1,168 @@
+<section class="section first-section">
+  <div class="container-fluid">
+    <div class="masonry-blog clearfix">
+      <!-- Visore banner -->
+      {% set banner_items = drupal_view_result('home_banner_articoli','default') %}
+      {% for item in banner_items %}
+        {% set media_entity = item._entity.field_immagine_copertina.entity %}
+        {% set file_entity = media_entity.field_media_image.entity %}
+        {% set file_uri = file_entity.fileuri %}
+
+        {% if banner_items|length == 1 %}
+          <div>
+            <div class="masonry-box post-media">
+              <img style="object-fit:cover; height: 449px;" src="{{ file_uri|image_style('cover') }}" alt="" class="img-fluid">
+              <div class="shadoweffect">
+                <div class="shadow-desc">
+                  <div class="blog-meta">
+                    <span class="bg-orange"><a href="/articoli" title="">Recensione</a></span>
+                    <h4><a href="{{ path('entity.node.canonical', {'node': item._entity.id()}) }}" title="">{{ item._entity.title.value }}</a></h4>
+                    <small><a title="">{{ item._entity.field_data_di_uscita.value|format('d-m-Y') }}</a></small>
+                    <small><a title="">scritto da {{ item._entity.uid.entity.name.value }}</a></small>
+                  </div><!-- end meta -->
+                </div><!-- end shadow-desc -->
+              </div><!-- end shadow -->
+            </div><!-- end post-media -->
+          </div><!-- end first-side -->
+        {% elseif loop.first %}
+          <div class="first-slot">
+            <div class="masonry-box post-media">
+              <img style="object-fit:cover; height: 449px;" src="{{ file_uri|image_style('cover') }}" alt="" class="img-fluid">
+              <div class="shadoweffect">
+                <div class="shadow-desc">
+                  <div class="blog-meta">
+                    <span class="bg-orange"><a href="/articoli" title="">Recensione</a></span>
+                    <h4><a href="{{ path('entity.node.canonical', {'node': item._entity.id()}) }}" title="{{ item._entity.title.value }}">{{ item._entity.title.value }}</a></h4>
+                    <small><a title="">{{ item._entity.field_data_di_uscita.value|format('d-m-Y') }}</a></small>
+                    <small><a title="">scritto da {{ item._entity.uid.entity.name.value }}</a></small>
+                  </div><!-- end meta -->
+                </div><!-- end shadow-desc -->
+              </div><!-- end shadow -->
+            </div><!-- end post-media -->
+          </div><!-- end first-slot -->
+        {% else %}
+          <div class="second-slot">
+            <div class="masonry-box post-media">
+              <img style="object-fit:cover; height: 449px;" src="{{ file_uri|image_style('cover') }}" alt="" class="img-fluid">
+              <div class="shadoweffect">
+                <div class="shadow-desc">
+                  <div class="blog-meta">
+                    <span class="bg-orange"><a href="/articoli" title="">Recensione</a></span>
+                    <h4><a href="{{ path('entity.node.canonical', {'node': item._entity.id()}) }}" title="{{ item._entity.title.value }}">{{ item._entity.title.value }}</a></h4>
+                    <small><a title="">{{ item._entity.field_data_di_uscita.value|format('d-m-Y') }}</a></small>
+                    <small><a title="">scritto da {{ item._entity.uid.entity.name.value }}</a></small>
+                  </div><!-- end meta -->
+                </div><!-- end shadow-desc -->
+              </div><!-- end shadow -->
+            </div><!-- end post-media -->
+          </div><!-- end second-slot -->
+        {% endif %}
+      {% endfor %}
+
+
+
+    </div><!-- end masonry -->
+    </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+        <div class="page-wrapper">
+          <div class="blog-top clearfix">
+            <h4 class="pull-left">Articoli recenti <a href="#"><i class="fa fa-rss"></i></a></h4>
+          </div><!-- end blog-top -->
+
+          <div class="blog-list clearfix">
+            <!-- lista articoli -->
+            {% set list_items = drupal_view_result('home_lista_articoli','default') %}
+
+            {% for item in list_items %}
+              <div class="blog-box row">
+                <div class="col-md-4">
+                  <div class="post-media">
+                    <a href="{{  path('entity.node.canonical', {'node': item._entity.id()}) }}" title="">
+                      {% set media_entity = item._entity.field_immagine_copertina.entity %}
+                      {% set file_entity = media_entity.field_media_image.entity %}
+                      {% set file_url = file_entity.fileuri|file_url %}
+                      <img style="object-fit:cover; height: 250px;" src="{{ file_url }}" alt="" class="img-fluid">
+                      <div class="hovereffect"></div>
+                    </a>
+                  </div><!-- end media -->
+                </div><!-- end col -->
+
+                <div class="blog-meta big-meta col-md-8">
+                  <h4><a href="{{  path('entity.node.canonical', {'node': item._entity.id()}) }}" title="">{{ item._entity.title.value }}</a></h4>
+                  <p>{{ item._entity.field_body.value|striptags|truncate(150, true, '...')|raw }}</p>
+                  <small class="firstsmall"><a class="bg-orange" href="/articoli" title="">Recensione</a></small>
+                  <small><a title="">{{ item._entity.field_data_di_uscita.value|format('d-m-Y') }}</a></small>
+                  <small><a title="">scritto da {{ node.uid.entity.name.value }}</a></small>
+                </div><!-- end meta -->
+              </div><!-- end blog-box -->
+
+              {% if loop.index0 % list_items|length == 0 %}
+              <hr class="invis">
+
+              <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2334169882538249"
+                          crossorigin="anonymous"></script>
+                  <!-- Cosavedo home 1 -->
+                  <ins class="adsbygoogle"
+                       style="display:inline-block;width:728px;height:90px"
+                       data-ad-client="ca-pub-2334169882538249"
+                       data-ad-slot="8667026414"></ins>
+                  <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                  </script>
+                </div><!-- end col -->
+              </div><!-- end row -->
+
+              <hr class="invis">
+
+              {% else %}
+              <hr class="invis">
+              {% endif %}
+            {% endfor %}
+
+          </div><!-- end blog-list -->
+        </div><!-- end page-wrapper -->
+      </div><!-- end col -->
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="sidebar">
+          <div class="widget">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2334169882538249"
+                    crossorigin="anonymous"></script>
+            <!-- Cosavedo home side 1 -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:300px;height:600px"
+                 data-ad-client="ca-pub-2334169882538249"
+                 data-ad-slot="6535715347"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div><!-- end widget -->
+
+          <div class="widget">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2334169882538249"
+                    crossorigin="anonymous"></script>
+            <!-- Cosavedo home side 2 -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:200px;height:200px"
+                 data-ad-client="ca-pub-2334169882538249"
+                 data-ad-slot="4558931455"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div><!-- end widget -->
+        </div><!-- end sidebar -->
+      </div><!-- end col -->
+    </div><!-- end row -->
+  </div><!-- end container -->
+</section>
+
+<div class="dmtop">Scroll to Top</div>
