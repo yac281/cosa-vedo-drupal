@@ -1,0 +1,11 @@
+uuid: f2f81781-15ca-4f6a-bd50-a58250ad29c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+id: comment.form_commenti
+label: 'Form commenti'
+description: ''
+targetEntityType: comment
+cache: true

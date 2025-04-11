@@ -1,0 +1,348 @@
+_core:
+  default_config_hash: YixlmZ3_1NLL76wkNoYLku_Rhawol1aiHfGUaGrU_O4
+buttons_size: 32
+more_button: default
+custom_more_button: ''
+more_button_placement: after
+entities:
+  media: 1
+  node: 1
+  comment: 1
+  block_content: 0
+  contact_message: 0
+  file: 0
+  menu_link_content: 0
+  path_alias: 0
+  shortcut: 0
+  taxonomy_term: 0
+  user: 0
+social_share_platforms:
+  whatsapp:
+    enabled: '1'
+    weight: '4'
+  facebook:
+    enabled: '1'
+    weight: '5'
+  x:
+    enabled: '1'
+    weight: '6'
+  linkedin:
+    enabled: '1'
+    weight: '7'
+  email:
+    enabled: '1'
+    weight: '8'
+  twitter:
+    weight: '9'
+    enabled: 0
+  pinterest:
+    weight: '10'
+    enabled: 0
+  teams:
+    weight: '11'
+    enabled: 0
+  tumblr:
+    weight: '12'
+    enabled: 0
+  reddit:
+    weight: '13'
+    enabled: 0
+  snapchat:
+    weight: '14'
+    enabled: 0
+  copy_link:
+    weight: '15'
+    enabled: 0
+  facebook_messenger:
+    weight: '16'
+    enabled: 0
+  skype:
+    weight: '17'
+    enabled: 0
+  sms:
+    weight: '18'
+    enabled: 0
+  trello:
+    weight: '19'
+    enabled: 0
+  viber:
+    weight: '20'
+    enabled: 0
+  telegram:
+    weight: '21'
+    enabled: 0
+  goodreads:
+    weight: '22'
+    enabled: 0
+  google_bookmarks:
+    weight: '23'
+    enabled: 0
+  digg:
+    weight: '24'
+    enabled: 0
+  printfriendly:
+    weight: '25'
+    enabled: 0
+  print:
+    weight: '26'
+    enabled: 0
+  vk:
+    weight: '27'
+    enabled: 0
+  line:
+    weight: '28'
+    enabled: 0
+  baidu:
+    weight: '29'
+    enabled: 0
+  evernote:
+    weight: '30'
+    enabled: 0
+  mastodon:
+    weight: '31'
+    enabled: 0
+  minds:
+    weight: '32'
+    enabled: 0
+  google_translate:
+    weight: '33'
+    enabled: 0
+  gettr:
+    weight: '34'
+    enabled: 0
+  parler:
+    weight: '35'
+    enabled: 0
+  gab:
+    weight: '36'
+    enabled: 0
+  mewe:
+    weight: '37'
+    enabled: 0
+  koo:
+    weight: '38'
+    enabled: 0
+  douban:
+    weight: '39'
+    enabled: 0
+  draugiem:
+    weight: '40'
+    enabled: 0
+  google_classroom:
+    weight: '41'
+    enabled: 0
+  kik:
+    weight: '42'
+    enabled: 0
+  papaly:
+    weight: '43'
+    enabled: 0
+  refind:
+    weight: '44'
+    enabled: 0
+  threema:
+    weight: '45'
+    enabled: 0
+  designfloat:
+    weight: '46'
+    enabled: 0
+  gentlereader:
+    weight: '47'
+    enabled: 0
+  wordPress:
+    weight: '48'
+    enabled: 0
+  diigo:
+    weight: '49'
+    enabled: 0
+  hacker_news:
+    weight: '50'
+    enabled: 0
+  box:
+    weight: '51'
+    enabled: 0
+  aol:
+    weight: '52'
+    enabled: 0
+  yahoo:
+    weight: '53'
+    enabled: 0
+  instapaper:
+    weight: '54'
+    enabled: 0
+  plurk:
+    weight: '55'
+    enabled: 0
+  aim:
+    weight: '56'
+    enabled: 0
+  viadeo:
+    weight: '57'
+    enabled: 0
+  pinboard:
+    weight: '58'
+    enabled: 0
+  blogger:
+    weight: '59'
+    enabled: 0
+  typepad:
+    weight: '60'
+    enabled: 0
+  bufferapp:
+    weight: '61'
+    enabled: 0
+  flipboard:
+    weight: '62'
+    enabled: 0
+  getpocket:
+    weight: '63'
+    enabled: 0
+  fark:
+    weight: '64'
+    enabled: 0
+  fintel:
+    weight: '65'
+    enabled: 0
+  yummly:
+    weight: '66'
+    enabled: 0
+  app:
+    weight: '67'
+    enabled: 0
+  symbaloo:
+    weight: '68'
+    enabled: 0
+  outlook:
+    weight: '69'
+    enabled: 0
+  balatarin:
+    weight: '70'
+    enabled: 0
+  bibsonomy:
+    weight: '71'
+    enabled: 0
+  bitty:
+    weight: '72'
+    enabled: 0
+  blinklist:
+    weight: '73'
+    enabled: 0
+  blogmarks:
+    weight: '74'
+    enabled: 0
+  bookmarks_fr:
+    weight: '75'
+    enabled: 0
+  buddymarks:
+    weight: '76'
+    enabled: 0
+  care2:
+    weight: '77'
+    enabled: 0
+  diary:
+    weight: '78'
+    enabled: 0
+  folkd:
+    weight: '79'
+    enabled: 0
+  hatena:
+    weight: '80'
+    enabled: 0
+  jamespot:
+    weight: '81'
+    enabled: 0
+  kakao:
+    weight: '82'
+    enabled: 0
+  kindle:
+    weight: '83'
+    enabled: 0
+  withknown:
+    weight: '84'
+    enabled: 0
+  livejournal:
+    weight: '85'
+    enabled: 0
+  mail_ru:
+    weight: '86'
+    enabled: 0
+  mendeley:
+    weight: '87'
+    enabled: 0
+  meneame:
+    weight: '88'
+    enabled: 0
+  mix:
+    weight: '89'
+    enabled: 0
+  mixi:
+    weight: '90'
+    enabled: 0
+  myspace:
+    weight: '91'
+    enabled: 0
+  netvouz:
+    weight: '92'
+    enabled: 0
+  odnoklassniki:
+    weight: '93'
+    enabled: 0
+  protopage:
+    weight: '94'
+    enabled: 0
+  pusha:
+    weight: '95'
+    enabled: 0
+  qzone:
+    weight: '96'
+    enabled: 0
+  renren:
+    weight: '97'
+    enabled: 0
+  weibo:
+    weight: '98'
+    enabled: 0
+  sitejot:
+    weight: '99'
+    enabled: 0
+  slashdot:
+    weight: '100'
+    enabled: 0
+  stocktwits:
+    weight: '101'
+    enabled: 0
+  svejo:
+    weight: '102'
+    enabled: 0
+  tuenti:
+    weight: '103'
+    enabled: 0
+  twiddla:
+    weight: '104'
+    enabled: 0
+  webnews:
+    weight: '105'
+    enabled: 0
+  wykop:
+    weight: '106'
+    enabled: 0
+  xing:
+    weight: '107'
+    enabled: 0
+  yoolink:
+    weight: '108'
+    enabled: 0
+  truthsocial:
+    weight: '109'
+    enabled: 0
+  nextdoor:
+    weight: '110'
+    enabled: 0
+btn_border_round: 0
+btn_show_label: 0
+enable_button_spacing: 0
+buttons_label: ''
+btn_type: default
+btn_bg_color: '#ffffff'
+icon_color_type: default
+icon_color: '#ffffff'

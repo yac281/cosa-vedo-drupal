@@ -1,0 +1,44 @@
+uuid: f745537c-781e-47a5-98ec-64379a7d7bed
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+    - core.entity_form_mode.comment.form_commenti
+    - field.field.comment.comment.comment_body
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: I0Pa0aQvT_jawlPo9oz4FE3h_ickc55dYKTPl6gILes
+id: comment.comment.form_commenti
+targetEntityType: comment
+bundle: comment
+mode: form_commenti
+content:
+  author:
+    weight: -2
+    region: content
+  comment_body:
+    type: text_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

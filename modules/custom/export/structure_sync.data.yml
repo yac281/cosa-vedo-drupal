@@ -1,0 +1,614 @@
+taxonomies:
+  emozioni:
+    -
+      vid: emozioni
+      tid: '39'
+      langcode: en
+      name: Ambivalenza
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: fe2a46fa-7018-4b7d-b4c6-948bf521ec4a
+    -
+      vid: emozioni
+      tid: '29'
+      langcode: en
+      name: Ammirazione
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 3962b3cc-be3f-4e60-af3e-e1f4edc7b6fa
+    -
+      vid: emozioni
+      tid: '30'
+      langcode: en
+      name: Amore
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: ccb84cd3-bdfa-43e9-ae31-33df70aafae8
+    -
+      vid: emozioni
+      tid: '14'
+      langcode: en
+      name: Ansia
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: c1f538d0-d0fa-4409-8e7f-96b7c38936f1
+    -
+      vid: emozioni
+      tid: '32'
+      langcode: en
+      name: Attrazione
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 3f055ed7-3613-4ce0-ab33-6566ac9c08c9
+    -
+      vid: emozioni
+      tid: '40'
+      langcode: en
+      name: Catarsi
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: f183783f-2574-4420-a7e5-487941175505
+    -
+      vid: emozioni
+      tid: '37'
+      langcode: en
+      name: Coinvolgimento
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 93b8308e-85b1-43ca-82c7-f9dbb3fe129b
+    -
+      vid: emozioni
+      tid: '3'
+      langcode: en
+      name: Commozione
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 9ddb11e4-8501-4f86-8d96-89aee5fac39c
+    -
+      vid: emozioni
+      tid: '24'
+      langcode: en
+      name: Confusione
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: a8ef465d-1eaf-4eb8-9de6-b39559b7ab4e
+    -
+      vid: emozioni
+      tid: '28'
+      langcode: en
+      name: Curiosità
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 3b693581-ef1d-4041-9b69-3d21278ddaac
+    -
+      vid: emozioni
+      tid: '31'
+      langcode: en
+      name: Desiderio
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: ed48bfe3-17ac-4102-9e3b-2ea275627225
+    -
+      vid: emozioni
+      tid: '2'
+      langcode: en
+      name: Disperazione
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 3f414b56-26f7-4d67-8192-a7b0865bba9c
+    -
+      vid: emozioni
+      tid: '22'
+      langcode: en
+      name: Disprezzo
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: b6e0225d-9cf9-477f-83cc-a8cf1871ef2f
+    -
+      vid: emozioni
+      tid: '4'
+      langcode: en
+      name: Empatia
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 22aa2b9c-2bc7-4030-8866-24d67908e192
+    -
+      vid: emozioni
+      tid: '8'
+      langcode: en
+      name: Felicità
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 94fd2ed0-d44a-4ecb-8a1c-da9f5f67a4a9
+    -
+      vid: emozioni
+      tid: '20'
+      langcode: en
+      name: Frustrazione
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 378fc8e2-f263-49e8-9880-6a15012c60ce
+    -
+      vid: emozioni
+      tid: '33'
+      langcode: en
+      name: Gelosia
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 619de841-f09b-4ba1-9bad-53307f9c3fb1
+    -
+      vid: emozioni
+      tid: '7'
+      langcode: en
+      name: Gioia
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: f35be444-804f-4469-80d1-2e84af479863
+    -
+      vid: emozioni
+      tid: '38'
+      langcode: en
+      name: Identificazione
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 4ee1faad-2d10-4c2a-b067-c07e91dab9e6
+    -
+      vid: emozioni
+      tid: '21'
+      langcode: en
+      name: Indignazione
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 7ea891ec-4294-4ca7-83ad-f52acd0d834c
+    -
+      vid: emozioni
+      tid: '34'
+      langcode: en
+      name: Innamoramento
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 51847344-319e-4e6e-aab1-4454a29856a1
+    -
+      vid: emozioni
+      tid: '16'
+      langcode: en
+      name: Inquietudine
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 965ecd6b-42fb-4a69-aef7-f11a2f6af171
+    -
+      vid: emozioni
+      tid: '35'
+      langcode: en
+      name: Interesse
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 79a05252-dc14-446e-9444-d74c3347f2b6
+    -
+      vid: emozioni
+      tid: '25'
+      langcode: en
+      name: Meraviglia
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: e8c396b7-c59a-46bc-9dab-5e736b555d2b
+    -
+      vid: emozioni
+      tid: '5'
+      langcode: en
+      name: Nostalgia
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 236ca305-c40d-4973-ad7e-c5e130c2d012
+    -
+      vid: emozioni
+      tid: '17'
+      langcode: en
+      name: Panico
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: ef01ecd4-8146-4dd8-a0cd-b38d6f332113
+    -
+      vid: emozioni
+      tid: '13'
+      langcode: en
+      name: Paura
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 09ebf76d-eeb0-414b-8eb4-5ba72da400cc
+    -
+      vid: emozioni
+      tid: '19'
+      langcode: en
+      name: Rabbia
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 2496d693-a86f-46c6-91ba-de5f404b8f09
+    -
+      vid: emozioni
+      tid: '36'
+      langcode: en
+      name: Riflessione
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 146cdcfd-7fb1-4ccc-b803-6b28314cb2f2
+    -
+      vid: emozioni
+      tid: '6'
+      langcode: en
+      name: Rimorso
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: e8c5794d-63d0-4261-83f5-69089d133a25
+    -
+      vid: emozioni
+      tid: '23'
+      langcode: en
+      name: Sdegno
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 2c83119a-d353-4e86-8846-f43577e8c899
+    -
+      vid: emozioni
+      tid: '12'
+      langcode: en
+      name: Soddisfazione
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: b93f86f3-78a4-458a-b707-f63eb8df3f5f
+    -
+      vid: emozioni
+      tid: '9'
+      langcode: en
+      name: Sollievo
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: a17683d4-ea2d-4ee2-9ab4-eaeb9947ced6
+    -
+      vid: emozioni
+      tid: '26'
+      langcode: en
+      name: Sorpresa
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 290a74f6-6baf-4b36-97cd-a766e98b4458
+    -
+      vid: emozioni
+      tid: '18'
+      langcode: en
+      name: Sospetto
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: a4384952-ce0a-4372-897e-39fa386d17b9
+    -
+      vid: emozioni
+      tid: '11'
+      langcode: en
+      name: Speranza
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: b5e36454-f9ef-4448-bf30-4875f08f0c8f
+    -
+      vid: emozioni
+      tid: '27'
+      langcode: en
+      name: Stupore
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 1510bea9-6b9c-476c-a9a3-a8ddffea0573
+    -
+      vid: emozioni
+      tid: '10'
+      langcode: en
+      name: Tenerezza
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: e199454d-1905-47b3-9e1f-0a94902a0a38
+    -
+      vid: emozioni
+      tid: '15'
+      langcode: en
+      name: Tensione
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: b330b119-72e8-4218-aea3-fda23b30250e
+    -
+      vid: emozioni
+      tid: '1'
+      langcode: en
+      name: Tristezza
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 4bd7e910-5c8c-4c55-9764-897cb9a80a8d
+  genere:
+    -
+      vid: genere
+      tid: '43'
+      langcode: en
+      name: Animazione
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 7082e915-530b-4f7d-a471-506c26a04712
+    -
+      vid: genere
+      tid: '42'
+      langcode: en
+      name: Avventura
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 5efd9d8f-6d62-49b4-8cdb-964e644e384c
+    -
+      vid: genere
+      tid: '41'
+      langcode: en
+      name: Azione
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 6995d80d-deb3-42e5-9ac4-611807c7e78a
+    -
+      vid: genere
+      tid: '44'
+      langcode: en
+      name: Biografico
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: c727e0cb-f806-4a1b-b86a-c6a1fcb02c89
+    -
+      vid: genere
+      tid: '45'
+      langcode: en
+      name: Commedia
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 695cbf75-e7c8-4649-b088-103683255ec6
+    -
+      vid: genere
+      tid: '47'
+      langcode: en
+      name: Documentario
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 2ef4dd12-8de9-4746-a2c5-9ad594d0ed6e
+    -
+      vid: genere
+      tid: '46'
+      langcode: en
+      name: Drammatico
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 4c263448-171d-46b3-a1f1-3600569d249a
+    -
+      vid: genere
+      tid: '48'
+      langcode: en
+      name: Epico
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: b013f502-06fd-43e0-9975-8743510edb50
+    -
+      vid: genere
+      tid: '49'
+      langcode: en
+      name: Fantascienza
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: b32a722e-5ef9-4d9b-bc8c-36e80f93d7ef
+    -
+      vid: genere
+      tid: '50'
+      langcode: en
+      name: Fantasy
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: e7aee0a0-f910-447c-b4ae-dbf1724e7bfe
+    -
+      vid: genere
+      tid: '51'
+      langcode: en
+      name: Giallo
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 136915d4-3200-4be0-955d-306476199c5e
+    -
+      vid: genere
+      tid: '52'
+      langcode: en
+      name: Guerra
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 051e1e4f-8715-452a-b1a5-c9c6d369455f
+    -
+      vid: genere
+      tid: '53'
+      langcode: en
+      name: Horror
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 5a3854dc-c9e0-492e-a01e-0a6dc677a947
+    -
+      vid: genere
+      tid: '54'
+      langcode: en
+      name: Musical
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 15181a85-0df8-4de9-aed4-5183994793b8
+    -
+      vid: genere
+      tid: '55'
+      langcode: en
+      name: Poliziesco
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 927672eb-b165-4803-8816-f535d0861ce4
+    -
+      vid: genere
+      tid: '56'
+      langcode: en
+      name: Sentimentale
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 4c637c2e-e76a-4891-b345-f783826daf44
+    -
+      vid: genere
+      tid: '57'
+      langcode: en
+      name: Spionaggio
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: c5577b8b-5e85-4107-87a9-63abd79d5423
+    -
+      vid: genere
+      tid: '58'
+      langcode: en
+      name: Sportivo
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 5af7f7e4-e5ce-4ab1-aeba-13d581b1fece
+    -
+      vid: genere
+      tid: '59'
+      langcode: en
+      name: Storico
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 991cd06d-b725-4b44-a217-6ddee922e7bd
+    -
+      vid: genere
+      tid: '60'
+      langcode: en
+      name: Thriller
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: c5f6ec72-262b-4381-bed6-288bc5837935
+    -
+      vid: genere
+      tid: '61'
+      langcode: en
+      name: Western
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 0fa7bd70-f033-4c09-b553-952007c52b1e
+  tags: {  }

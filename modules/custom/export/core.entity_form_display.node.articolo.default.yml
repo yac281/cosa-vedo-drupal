@@ -7,18 +7,21 @@ dependencies:
     - field.field.node.articolo.field_body
     - field.field.node.articolo.field_comment
     - field.field.node.articolo.field_data_di_uscita
+    - field.field.node.articolo.field_emozioni
+    - field.field.node.articolo.field_genere
     - field.field.node.articolo.field_immagine_copertina
     - field.field.node.articolo.field_immagine_riassunto
+    - field.field.node.articolo.field_metatag
     - field.field.node.articolo.field_regia
     - field.field.node.articolo.field_riassunto
     - field.field.node.articolo.field_voto
     - node.type.articolo
   module:
-    - comment
     - datetime
     - field_layout
     - layout_discovery
     - media_library
+    - metatag
     - path
     - text
 third_party_settings:
@@ -33,7 +36,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 11
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -52,17 +55,31 @@ content:
       rows: 10
       placeholder: ''
     third_party_settings: {  }
-  field_comment:
-    type: comment_default
-    weight: 26
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_data_di_uscita:
     type: datetime_default
     weight: 1
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_emozioni:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_genere:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_immagine_copertina:
     type: media_library_widget
@@ -77,6 +94,14 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 26
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_regia:
     type: string_textfield
@@ -103,13 +128,13 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 12
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 9
+    weight: 11
     region: content
     settings:
       display_label: true
@@ -124,7 +149,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 10
+    weight: 12
     region: content
     settings:
       match_operator: CONTAINS
@@ -133,5 +158,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  field_comment: true
   promote: true
   sticky: true

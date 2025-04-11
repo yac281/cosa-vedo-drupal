@@ -17,7 +17,7 @@
                   <div class="blog-meta">
                     <span class="bg-orange"><a href="/articoli" title="">Recensione</a></span>
                     <h4><a href="{{ path('entity.node.canonical', {'node': item._entity.id()}) }}" title="">{{ item._entity.title.value }}</a></h4>
-                    <small><a title="">{{ item._entity.field_data_di_uscita.value|format('d-m-Y') }}</a></small>
+                    <small><a title="">{{ item._entity.field_data_di_uscita.value|date("d-m-Y") }}</a></small>
                     <small><a title="">scritto da {{ item._entity.uid.entity.name.value }}</a></small>
                   </div><!-- end meta -->
                 </div><!-- end shadow-desc -->
@@ -33,7 +33,7 @@
                   <div class="blog-meta">
                     <span class="bg-orange"><a href="/articoli" title="">Recensione</a></span>
                     <h4><a href="{{ path('entity.node.canonical', {'node': item._entity.id()}) }}" title="{{ item._entity.title.value }}">{{ item._entity.title.value }}</a></h4>
-                    <small><a title="">{{ item._entity.field_data_di_uscita.value|format('d-m-Y') }}</a></small>
+                    <small><a title="">{{ item._entity.field_data_di_uscita.value|date("d-m-Y") }}</a></small>
                     <small><a title="">scritto da {{ item._entity.uid.entity.name.value }}</a></small>
                   </div><!-- end meta -->
                 </div><!-- end shadow-desc -->
@@ -49,7 +49,7 @@
                   <div class="blog-meta">
                     <span class="bg-orange"><a href="/articoli" title="">Recensione</a></span>
                     <h4><a href="{{ path('entity.node.canonical', {'node': item._entity.id()}) }}" title="{{ item._entity.title.value }}">{{ item._entity.title.value }}</a></h4>
-                    <small><a title="">{{ item._entity.field_data_di_uscita.value|format('d-m-Y') }}</a></small>
+                    <small><a title="">{{ item._entity.field_data_di_uscita.value|date("d-m-Y") }}</a></small>
                     <small><a title="">scritto da {{ item._entity.uid.entity.name.value }}</a></small>
                   </div><!-- end meta -->
                 </div><!-- end shadow-desc -->
@@ -98,7 +98,7 @@
                   <h4><a href="{{  path('entity.node.canonical', {'node': item._entity.id()}) }}" title="">{{ item._entity.title.value }}</a></h4>
                   <p>{{ item._entity.field_body.value|striptags|truncate(150, true, '...')|raw }}</p>
                   <small class="firstsmall"><a class="bg-orange" href="/articoli" title="">Recensione</a></small>
-                  <small><a title="">{{ item._entity.field_data_di_uscita.value|format('d-m-Y') }}</a></small>
+                  <small><a title="">{{ item._entity.field_data_di_uscita.value|date("d-m-Y") }}</a></small>
                   <small><a title="">scritto da {{ node.uid.entity.name.value }}</a></small>
                 </div><!-- end meta -->
               </div><!-- end blog-box -->
