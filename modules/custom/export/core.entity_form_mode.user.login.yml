@@ -1,0 +1,11 @@
+uuid: 70634085-c3a8-4bf6-87f0-a55753c7a1d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.login
+label: Login
+description: ''
+targetEntityType: user
+cache: true

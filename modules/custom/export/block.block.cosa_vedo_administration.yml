@@ -1,0 +1,33 @@
+uuid: e359dc35-5eaa-4435-846a-f1653539ec9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.admin
+  module:
+    - system
+    - user
+  theme:
+    - cosa_vedo
+id: cosa_vedo_administration
+theme: cosa_vedo
+region: header
+weight: -2
+provider: null
+plugin: 'system_menu_block:admin'
+settings:
+  id: 'system_menu_block:admin'
+  label: Administration
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator

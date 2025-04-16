@@ -1,0 +1,28 @@
+<div class="layout-container mx-0">
+  {{ page.header }}
+
+  <main class="h-full">
+    <div id="content" role="main">
+      <section id="content-page" class="h-full">
+        <div class="container" style="margin-top: 10%">
+          <div class="row">
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+              <div class="page-wrapper">
+                <div class="blog-title-area text-center">
+                  <h3>{{ 'Pagina non autorizzata'|t }}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {% if page.footer %}
+        <footer role="contentinfo">
+          {{ page.footer }}
+        </footer>
+      {% endif %}
+    </div>
+  </main>
+</div>
+

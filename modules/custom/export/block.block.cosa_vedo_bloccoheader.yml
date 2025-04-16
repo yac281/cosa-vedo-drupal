@@ -11,7 +11,7 @@ dependencies:
 id: cosa_vedo_bloccoheader
 theme: cosa_vedo
 region: header
-weight: -1
+weight: 1
 provider: null
 plugin: 'block_content:e370e22c-9ae6-4402-b866-2bcdf7ab31cc'
 settings:

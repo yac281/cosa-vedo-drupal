@@ -1,8 +1,9 @@
-uuid: b7ca2db8-1857-4673-87aa-3319db366ab9
+uuid: 5598175b-c634-4f2a-9d19-5a5880ad1af8
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.user.login
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -18,26 +19,20 @@ third_party_settings:
       label: ''
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
-id: user.user.default
+id: user.user.login
 targetEntityType: user
 bundle: user
-mode: default
+mode: login
 content:
   account:
     weight: -10
     region: content
-    settings: {  }
-    third_party_settings: {  }
   contact:
     weight: 5
     region: content
-    settings: {  }
-    third_party_settings: {  }
   language:
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
   path:
     type: path
     weight: 30
@@ -47,8 +42,6 @@ content:
   timezone:
     weight: 6
     region: content
-    settings: {  }
-    third_party_settings: {  }
   user_picture:
     type: image_image
     weight: -1

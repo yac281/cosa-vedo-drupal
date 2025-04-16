@@ -1,0 +1,27 @@
+uuid: 7f127bce-56fe-44df-b8c8-887981ac3734
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - cosa_vedo
+id: cosa_vedo_primaryadminactions
+theme: cosa_vedo
+region: header
+weight: -1
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
