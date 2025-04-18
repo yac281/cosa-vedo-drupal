@@ -23,6 +23,7 @@ dependencies:
     - media_library
     - metatag
     - path
+    - term_reference_tree
     - text
 third_party_settings:
   field_layout:
@@ -62,24 +63,26 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_emozioni:
-    type: entity_reference_autocomplete
+    type: term_reference_tree
     weight: 10
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      start_minimized: true
+      leaves_only: false
+      select_parents: false
+      cascading_selection: 0
+      max_depth: 0
     third_party_settings: {  }
   field_genere:
-    type: entity_reference_autocomplete
+    type: term_reference_tree
     weight: 9
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      start_minimized: true
+      leaves_only: false
+      select_parents: false
+      cascading_selection: 0
+      max_depth: 0
     third_party_settings: {  }
   field_immagine_copertina:
     type: media_library_widget

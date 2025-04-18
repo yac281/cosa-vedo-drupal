@@ -1,3 +1,59 @@
+blocks:
+  -
+    info: 'Block - Footer'
+    langcode: en
+    uuid: b8e72f10-3955-4f23-8781-312c1a107795
+    bundle: footer
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_descrizione_sito:
+        -
+          value: 'Cosa vedo è un blog personale per recensire e parlare di cinema e tv.'
+      field_link_cookies:
+        -
+          uri: 'route:<nolink>'
+          title: 'Cookie Policy'
+          options: {  }
+      field_link_privacy_policy:
+        -
+          uri: 'route:<nolink>'
+          title: 'Privacy Policy'
+          options: {  }
+      field_logo:
+        -
+          target_id: '4'
+      field_menu:
+        -
+          target_id: main
+  -
+    info: 'Blocco - Header'
+    langcode: en
+    uuid: e370e22c-9ae6-4402-b866-2bcdf7ab31cc
+    bundle: header
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_logo:
+        -
+          target_id: '4'
+      field_menu:
+        -
+          target_id: main
+menus:
+  -
+    menu_name: main
+    title: Articoli
+    parent: null
+    uri: 'internal:/articoli'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -49
+    langcode: en
+    uuid: 9e3b107a-4740-4988-992b-c8010dc6ea5f
+    options: {  }
 taxonomies:
   emozioni:
     -

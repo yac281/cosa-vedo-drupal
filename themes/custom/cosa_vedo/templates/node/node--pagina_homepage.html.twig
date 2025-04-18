@@ -102,28 +102,6 @@
                   <small><a title="">scritto da {{ node.uid.entity.name.value }}</a></small>
                 </div><!-- end meta -->
               </div><!-- end blog-box -->
-
-              {% if loop.index0 % list_items|length == 0 %}
-              <hr class="invis">
-
-              <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2334169882538249"
-                          crossorigin="anonymous"></script>
-                  <!-- Cosavedo home 1 -->
-                  <ins class="adsbygoogle"
-                       style="display:inline-block;width:728px;height:90px"
-                       data-ad-client="ca-pub-2334169882538249"
-                       data-ad-slot="8667026414"></ins>
-                  <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                  </script>
-                </div><!-- end col -->
-              </div><!-- end row -->
-
-              <hr class="invis">
-
-              {% else %}
               <hr class="invis">
               {% endif %}
             {% endfor %}

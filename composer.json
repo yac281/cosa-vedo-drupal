@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^2.3",
+        "drupal/adstxt": "^1.4",
         "drupal/better_social_share": "^1.1",
         "drupal/core-composer-scaffold": "^11.1",
         "drupal/core-project-message": "^11.1",
@@ -24,6 +25,7 @@
         "drupal/metatag": "^2.1",
         "drupal/pathauto": "^1.13",
         "drupal/simplify_menu": "^3.3",
+        "drupal/single_content_sync": "^1.4",
         "drupal/structure_sync": "^2.0",
         "drupal/term_reference_tree": "^2.0",
         "drupal/twig_tweak": "^3.4",
