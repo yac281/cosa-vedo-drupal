@@ -13,13 +13,16 @@ dependencies:
     - field.field.node.articolo.field_immagine_riassunto
     - field.field.node.articolo.field_metatag
     - field.field.node.articolo.field_regia
+    - field.field.node.articolo.field_retrospettiva
     - field.field.node.articolo.field_riassunto
+    - field.field.node.articolo.field_streaming_link
     - field.field.node.articolo.field_voto
     - node.type.articolo
   module:
     - datetime
     - field_layout
     - layout_builder
+    - link
     - metatag
     - term_reference_tree
     - text
@@ -115,12 +118,34 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_retrospettiva:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 13
+    region: content
   field_riassunto:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_streaming_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 14
     region: content
   field_voto:
     type: number_decimal

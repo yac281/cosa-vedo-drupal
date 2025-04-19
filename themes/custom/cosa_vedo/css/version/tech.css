@@ -112,6 +112,13 @@ h5 {
     border-radius: 3px;
 }
 
+.blog-grid-system .color-yellow a {
+  color: #ffffff !important;
+  font-size: 13px;
+  padding: 0 0.7rem;
+  border-radius: 3px;
+}
+
 .blog-top {
     margin-bottom: 2rem;
 }
@@ -191,6 +198,12 @@ h5 {
     border-radius: 3px;
 }
 
+.blog-meta .bg-yellow {
+  color: #ffffff !important;
+  padding: 0 0.8rem;
+  border-radius: 3px;
+}
+
 .blog-meta small.firstsmall:after {
     content: "" !important;
     padding-left: 0;
@@ -250,6 +263,10 @@ h5 {
 
 .bg-orange {
     background-color: #FF6347 !important;
+}
+
+.bg-yellow {
+  background-color: #ffb900 !important;
 }
 
 .page-title .bg-orange,

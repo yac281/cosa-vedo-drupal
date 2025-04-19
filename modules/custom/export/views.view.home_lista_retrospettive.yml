@@ -1,4 +1,4 @@
-uuid: 20de69c1-c5ed-49b8-8a91-319781845ab3
+uuid: 1c6a01ab-3179-414c-9706-001d9e8ecd68
 langcode: en
 status: true
 dependencies:
@@ -11,8 +11,8 @@ dependencies:
     - node
     - text
     - user
-id: home_lista_articoli
-label: 'Home - lista articoli'
+id: home_lista_retrospettive
+label: 'Home - lista retrospettive'
 module: views
 description: ''
 tag: ''
@@ -275,7 +275,7 @@ display:
         options:
           offset: 0
           pagination_heading_level: h4
-          items_per_page: 4
+          items_per_page: 2
           total_pages: null
           id: 0
           tags:
@@ -308,14 +308,16 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        field_data_di_uscita_value:
-          id: field_data_di_uscita_value
-          table: node__field_data_di_uscita
-          field: field_data_di_uscita_value
+        created:
+          id: created
+          table: node_field_data
+          field: created
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: datetime
+          entity_type: node
+          entity_field: created
+          plugin_id: date
           order: DESC
           expose:
             label: ''
@@ -352,8 +354,8 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: boolean
-          operator: empty
-          value: '0'
+          operator: '='
+          value: '1'
           group: 1
           exposed: false
           expose:

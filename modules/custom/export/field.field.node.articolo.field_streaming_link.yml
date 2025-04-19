@@ -1,0 +1,23 @@
+uuid: ff8ea0c8-9fff-40de-aad5-b7a31313c1ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_streaming_link
+    - node.type.articolo
+  module:
+    - link
+id: node.articolo.field_streaming_link
+field_name: field_streaming_link
+entity_type: node
+bundle: articolo
+label: 'Streaming Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

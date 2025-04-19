@@ -4,9 +4,11 @@
       <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
         <div class="page-wrapper">
           <div class="blog-title-area text-center">
-
-            <span class="color-orange"><a href="/articoli" title="">Recensione</a></span>
-
+            {% if node.field_retrospettiva.value %}
+              <span class="color-yellow"><a href="/cosa-ho-visto" title="">Retrospettiva</a></span>
+            {% else %}
+              <span class="color-orange"><a href="/articoli" title="">Recensione</a></span>
+            {% endif %}
             <h3>{{ node.title.value }}</h3>
 
             <div class="blog-meta big-meta">
@@ -28,6 +30,22 @@
             {{ node.field_body.value|raw }}
           </div><!-- end content -->
 
+          {% if node.field_streaming_link %}
+            <div class="card mt-4">
+              <div class="card-header text-center" style="background-color: #EFF1F3">
+                <h5>Tutto bello ma dove posso recuperarlo?</h5>
+              </div>
+              <div class="card-body text-center" style="padding: 20px">
+                <p>Purtroppo con tutte ste piattaforme è difficile starci dietro quindi ti affido ad un esperto</p>
+                <div class="tag-cloud-single">
+                  <a href="{{ node.field_streaming_link[0].uri }}">{{ node.field_streaming_link[0].title }}</a>
+                </div>
+                <a></a>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if node.field_riassunto.value|length > 0 %}
           <div class="card mt-4">
             <div class="card-header text-center" style="background-color: #EFF1F3">
               <div class="text-center mb-2">
@@ -52,6 +70,7 @@
               <p>{{ node.field_riassunto.value }}</p>
             </div>
           </div>
+          {% endif %}
 
           <div class="blog-title-area">
             <div class="tag-cloud-single">
@@ -164,12 +183,12 @@
           <div class="widget">
 
           </div><!-- end widget -->
-
+          {% set relate_articles = drupal_view_result('vista_articoli_recenti','default',node.id()) %}
+          {% if relate_articles|length > 0 %}
           <div class="widget">
             <h2 class="widget-title">Articoli recenti</h2>
             <div class="blog-list-widget">
               <div class="list-group">
-                {% set relate_articles = drupal_view_result('vista_articoli_recenti','default',node.id()) %}
                 {% for item in relate_articles %}
                   {% set entity_item = item._entity %}
                   <a href="{{  path('entity.node.canonical', {'node': entity_item.id()}) }}" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -185,6 +204,7 @@
               </div>
             </div>
           </div>
+          {% endif %}
 
           <!--<div class="widget">
               <h2 class="widget-title">Follow Us</h2>
@@ -221,7 +241,7 @@
           </div> end widget -->
 
           <div class="widget">
-            
+
           </div><!-- end widget -->
         </div><!-- end sidebar -->
       </div><!-- end col -->

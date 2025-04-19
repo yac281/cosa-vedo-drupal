@@ -1,0 +1,76 @@
+{#
+Template override per la vista 'pagina_articoli', display 'page'
+#}
+
+<div class="page-title lb single-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <h2><i class="fa fa-bookmark bg-yellow"></i> Cosa ho visto <small class="mt-3 hidden-xs-down hidden-sm-down"> Momento nostalgico? Qui trovi tutto quello che ha fatto la storia, senza che rimanga sotto il tappeto!</small></h2>
+      </div><!-- end col -->
+    </div><!-- end row -->
+  </div><!-- end container -->
+</div><!-- end page-title -->
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="sidebar">
+          <div class="widget">
+
+          </div><!-- end widget -->
+
+          <div class="widget">
+
+          </div><!-- end widget -->
+        </div><!-- end sidebar -->
+      </div><!-- end col -->
+
+      <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+        <div class="page-wrapper">
+          <div class="blog-grid-system">
+            <div class="row">
+              {% set rows = rows[0] %}
+              {% for row in rows['#rows'] %}
+                {% set entity = row['#node'] %}
+                <div class="col-md-6">
+                  <div class="blog-box">
+                    <div class="post-media">
+                      <a href="{{ path('entity.node.canonical', {'node': entity.id()}) }}" title="">
+                        {% set media_entity = entity.field_immagine_copertina.entity %}
+                        {% set file_entity = media_entity.field_media_image.entity %}
+                        {% set file_url = file_entity.fileuri|file_url %}
+                        <img style="object-fit:cover; height: 250px;" src="{{ file_url }}" alt="" class="img-fluid">
+                        <div class="hovereffect">
+                          <span></span>
+                        </div><!-- end hover -->
+                      </a>
+                    </div><!-- end media -->
+                    <div class="blog-meta big-meta">
+                      <span class="color-yellow"><a href="/cosa-ho-visto" title="">Retrospettiva</a></span>
+                      <h4><a href="{{  path('entity.node.canonical', {'node': entity.id()}) }}" title="">{{ entity.title.value }}</a></h4>
+                      <p>{{ entity.field_body.value|striptags|truncate(150, true, '...')|raw }}</p>
+                      <small><a title="">{{ entity.field_data_di_uscita.value|date("d-m-Y") }}</a></small>
+                      <small><a title="">scritto da {{ entity.uid.entity.name.value }}</a></small>
+                    </div><!-- end meta -->
+                  </div><!-- end blog-box -->
+                </div><!-- end col -->
+              {% endfor %}
+            </div><!-- end row -->
+          </div><!-- end blog-grid-system -->
+        </div><!-- end page-wrapper -->
+
+        <hr class="invis3">
+
+
+
+        <div class="row">
+          <div class="col-md-12">
+            {{ pager }}
+          </div><!-- end col -->
+        </div><!-- end row -->
+      </div><!-- end col -->
+    </div><!-- end row -->
+  </div><!-- end container -->
+</section>

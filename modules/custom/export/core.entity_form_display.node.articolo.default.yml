@@ -13,13 +13,16 @@ dependencies:
     - field.field.node.articolo.field_immagine_riassunto
     - field.field.node.articolo.field_metatag
     - field.field.node.articolo.field_regia
+    - field.field.node.articolo.field_retrospettiva
     - field.field.node.articolo.field_riassunto
+    - field.field.node.articolo.field_streaming_link
     - field.field.node.articolo.field_voto
     - node.type.articolo
   module:
     - datetime
     - field_layout
     - layout_discovery
+    - link
     - media_library
     - metatag
     - path
@@ -37,7 +40,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 13
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -64,7 +67,7 @@ content:
     third_party_settings: {  }
   field_emozioni:
     type: term_reference_tree
-    weight: 10
+    weight: 12
     region: content
     settings:
       start_minimized: true
@@ -75,7 +78,7 @@ content:
     third_party_settings: {  }
   field_genere:
     type: term_reference_tree
-    weight: 9
+    weight: 11
     region: content
     settings:
       start_minimized: true
@@ -100,7 +103,7 @@ content:
     third_party_settings: {  }
   field_metatag:
     type: metatag_firehose
-    weight: 26
+    weight: 17
     region: content
     settings:
       sidebar: true
@@ -114,6 +117,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_retrospettiva:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_riassunto:
     type: string_textarea
     weight: 3
@@ -121,6 +131,14 @@ content:
     settings:
       rows: 5
       placeholder: ''
+    third_party_settings: {  }
+  field_streaming_link:
+    type: link_default
+    weight: 10
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_voto:
     type: number
@@ -131,13 +149,13 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 14
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 11
+    weight: 13
     region: content
     settings:
       display_label: true
@@ -152,7 +170,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 12
+    weight: 14
     region: content
     settings:
       match_operator: CONTAINS
