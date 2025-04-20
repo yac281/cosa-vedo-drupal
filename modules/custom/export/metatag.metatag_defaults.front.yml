@@ -8,4 +8,6 @@ id: front
 label: 'Front page'
 tags:
   canonical_url: '[site:url]'
+  description: 'Cosa vedo è un blog personale per recensire e parlare di cinema e tv.'
   shortlink: '[site:url]'
+  title: 'Cosa vedo - Home'

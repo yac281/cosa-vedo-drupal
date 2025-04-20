@@ -1,14 +1,12 @@
 _core:
   default_config_hash: e1PekxOlsENErPqF_thc8pLGue7oBm0In_S8cNn-8zQ
-content: |
+content: |+
   # See https://iabtechlab.com/ads-txt-about/
   # < SSP/Exchange Domain >, < SellerAccountID >, < PaymentsType >, < TAGID >
-  greenadexchange.com, 12345, DIRECT, AEC242
-  blueadexchange.com, 4536, DIRECT
-  silverssp.com, 9675, RESELLER
-app_content: |
+  google.com, pub-2334169882538249, DIRECT, f08c47fec0942fa0
+
+app_content: |+
   # See https://iabtechlab.com/ads-txt-about/
   # < SSP/Exchange Domain >, < SellerAccountID >, < PaymentsType >, < TAGID >
-  onetwothree.com, 12345, DIRECT, AEC242
-  fourfivesix.com, 4536, DIRECT
-  97whatever.com, 9675, RESELLER
+  google.com, pub-2334169882538249, DIRECT, f08c47fec0942fa0
+

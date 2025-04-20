@@ -9,7 +9,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Site Metas -->
-<title>Cosa vedo - Chiacchiere di Cinema e Serie</title>
+<title>{{ head_title|safe_join(' | ') }}</title>
+<head-placeholder token="{{ placeholder_token|raw }}">
+
 <meta name="description" content="Cosa vedo - Chiacchiere di Cinema e Serie">
 <meta name="keywords" content="Home">
 <meta name="google-site-verification" content="eqUDbZrh4ThaRJseL7cGQ5HfBuYOxAOgHAMGzGKN9zM" />
