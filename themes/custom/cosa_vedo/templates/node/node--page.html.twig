@@ -1,0 +1,23 @@
+<section class="section single-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+        <div class="page-wrapper">
+          <div class="blog-title-area text-center">
+            <h3>{{ node.title.value }}</h3>
+          </div><!-- end title -->
+          <div class="single-post-media">
+            {% set media_entity = node.field_immagine_copertina.entity %}
+            {% set file_entity = media_entity.field_media_image.entity %}
+            {% set file_url = file_entity.fileuri|file_url %}
+            <img src="{{ file_url }}" alt="" class="img-fluid">
+          </div><!-- end media -->
+
+          <div class="blog-content">
+            {{ node.body.value|raw }}
+          </div><!-- end content -->
+        </div><!-- end page-wrapper -->
+      </div><!-- end col -->
+    </div><!-- end row -->
+  </div><!-- end container -->
+</section>

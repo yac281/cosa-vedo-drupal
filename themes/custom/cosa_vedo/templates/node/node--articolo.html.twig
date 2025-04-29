@@ -30,7 +30,7 @@
             {{ node.field_body.value|raw }}
           </div><!-- end content -->
 
-          {% if node.field_streaming_link %}
+          {% if node.field_streaming_link.value|length > 0 %}
             <div class="card mt-4">
               <div class="card-header text-center" style="background-color: #EFF1F3">
                 <h5>Tutto bello ma dove posso recuperarlo?</h5>
